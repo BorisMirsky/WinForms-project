@@ -1,22 +1,22 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Alexander\\source\\.Net\\WinForms1\\",
+  "WorkspaceRootPath": "C:\\Users\\Alexander\\source\\WinForms-project\\WinForms1\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{D4BB11B4-5CAB-4C97-BA37-F491E1126B28}|StudentForm\\StudentForm.csproj|c:\\users\\alexander\\source\\.net\\winforms1\\studentform\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{D4BB11B4-5CAB-4C97-BA37-F491E1126B28}|StudentForm\\StudentForm.csproj|c:\\users\\alexander\\source\\winforms-project\\winforms1\\studentform\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D4BB11B4-5CAB-4C97-BA37-F491E1126B28}|StudentForm\\StudentForm.csproj|solutionrelative:studentform\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D4BB11B4-5CAB-4C97-BA37-F491E1126B28}|StudentForm\\StudentForm.csproj|c:\\users\\alexander\\source\\.net\\winforms1\\studentform\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
-      "RelativeMoniker": "D:0:0:{D4BB11B4-5CAB-4C97-BA37-F491E1126B28}|StudentForm\\StudentForm.csproj|solutionrelative:studentform\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+      "AbsoluteMoniker": "D:0:0:{D4BB11B4-5CAB-4C97-BA37-F491E1126B28}|StudentForm\\StudentForm.csproj|C:\\Users\\Alexander\\source\\WinForms-project\\WinForms1\\studentform\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D4BB11B4-5CAB-4C97-BA37-F491E1126B28}|StudentForm\\StudentForm.csproj|solutionrelative:studentform\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D4BB11B4-5CAB-4C97-BA37-F491E1126B28}|StudentForm\\StudentForm.csproj|c:\\users\\alexander\\source\\.net\\winforms1\\studentform\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{D4BB11B4-5CAB-4C97-BA37-F491E1126B28}|StudentForm\\StudentForm.csproj|C:\\Users\\Alexander\\source\\WinForms-project\\WinForms1\\studentform\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D4BB11B4-5CAB-4C97-BA37-F491E1126B28}|StudentForm\\StudentForm.csproj|solutionrelative:studentform\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D4BB11B4-5CAB-4C97-BA37-F491E1126B28}|StudentForm\\StudentForm.csproj|c:\\users\\alexander\\source\\.net\\winforms1\\studentform\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D4BB11B4-5CAB-4C97-BA37-F491E1126B28}|StudentForm\\StudentForm.csproj|solutionrelative:studentform\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D4BB11B4-5CAB-4C97-BA37-F491E1126B28}|StudentForm\\StudentForm.csproj|C:\\Users\\Alexander\\source\\WinForms-project\\WinForms1\\studentform\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{D4BB11B4-5CAB-4C97-BA37-F491E1126B28}|StudentForm\\StudentForm.csproj|solutionrelative:studentform\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
     }
   ],
   "DocumentGroupContainers": [
@@ -54,24 +54,23 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "App.config",
-              "DocumentMoniker": "C:\\Users\\Alexander\\source\\.Net\\WinForms1\\StudentForm\\App.config",
+              "DocumentMoniker": "C:\\Users\\Alexander\\source\\WinForms-project\\WinForms1\\StudentForm\\App.config",
               "RelativeDocumentMoniker": "StudentForm\\App.config",
-              "ToolTip": "C:\\Users\\Alexander\\source\\.Net\\WinForms1\\StudentForm\\App.config",
+              "ToolTip": "C:\\Users\\Alexander\\source\\WinForms-project\\WinForms1\\StudentForm\\App.config",
               "RelativeToolTip": "StudentForm\\App.config",
               "ViewState": "AgIAAAYAAAAAAAAAAAAAAA8AAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
-              "WhenOpened": "2026-02-21T16:16:21.718Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-21T16:16:21.718Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\Alexander\\source\\.Net\\WinForms1\\StudentForm\\Program.cs",
+              "DocumentMoniker": "C:\\Users\\Alexander\\source\\WinForms-project\\WinForms1\\StudentForm\\Program.cs",
               "RelativeDocumentMoniker": "StudentForm\\Program.cs",
-              "ToolTip": "C:\\Users\\Alexander\\source\\.Net\\WinForms1\\StudentForm\\Program.cs",
+              "ToolTip": "C:\\Users\\Alexander\\source\\WinForms-project\\WinForms1\\StudentForm\\Program.cs",
               "RelativeToolTip": "StudentForm\\Program.cs",
               "ViewState": "AgIAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -82,11 +81,11 @@
               "$type": "Document",
               "DocumentIndex": 2,
               "Title": "Form2.cs",
-              "DocumentMoniker": "C:\\Users\\Alexander\\source\\.Net\\WinForms1\\StudentForm\\Form2.cs",
+              "DocumentMoniker": "C:\\Users\\Alexander\\source\\WinForms-project\\WinForms1\\StudentForm\\Form2.cs",
               "RelativeDocumentMoniker": "StudentForm\\Form2.cs",
-              "ToolTip": "C:\\Users\\Alexander\\source\\.Net\\WinForms1\\StudentForm\\Form2.cs",
+              "ToolTip": "C:\\Users\\Alexander\\source\\WinForms-project\\WinForms1\\StudentForm\\Form2.cs",
               "RelativeToolTip": "StudentForm\\Form2.cs",
-              "ViewState": "AgIAAFEAAAAAAAAAAAAgwFYAAAA5AAAAAAAAAA==",
+              "ViewState": "AgIAAHYAAAAAAAAAAAAcwFYAAAA5AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-02-21T14:48:51.516Z",
               "EditorCaption": ""
@@ -95,11 +94,11 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Form1.cs",
-              "DocumentMoniker": "C:\\Users\\Alexander\\source\\.Net\\WinForms1\\StudentForm\\Form1.cs",
+              "DocumentMoniker": "C:\\Users\\Alexander\\source\\WinForms-project\\WinForms1\\StudentForm\\Form1.cs",
               "RelativeDocumentMoniker": "StudentForm\\Form1.cs",
-              "ToolTip": "C:\\Users\\Alexander\\source\\.Net\\WinForms1\\StudentForm\\Form1.cs",
+              "ToolTip": "C:\\Users\\Alexander\\source\\WinForms-project\\WinForms1\\StudentForm\\Form1.cs",
               "RelativeToolTip": "StudentForm\\Form1.cs",
-              "ViewState": "AgIAADYAAAAAAAAAAAAswD0AAAAQAAAAAAAAAA==",
+              "ViewState": "AgIAADIAAAAAAAAAAAAqwDkAAAATAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-08-30T14:18:30.334Z",
               "EditorCaption": ""

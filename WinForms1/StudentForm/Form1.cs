@@ -10,7 +10,6 @@ using System.Data.SqlClient;
 
 
 
-// Coomon box
 namespace StudentForm
 {
     public partial class Form1 : Form
@@ -32,7 +31,7 @@ namespace StudentForm
         
         private void NAME_Click(object sender, EventArgs e)
         {
-            using (SqlConnection connection = new SqlConnection(connectionString))
+            using (SQLiteConnection connection = new SQLiteConnection(connectionString))
             {
             }
         }
@@ -56,14 +55,15 @@ namespace StudentForm
         private void Form1_Load(object sender, EventArgs e)
         {
             DataTable dt = new DataTable();
-            using (SqlConnection connection = new SqlConnection(connectionString))
+            using (SQLiteConnection connection = new SQLiteConnection(connectionString))
             {
 
                 connection.Open();
                 string sql1 = "select * from StudentDetails";
-                using (SqlCommand command = new SqlCommand(sql1, connection))
+                using (SQLiteCommand command = new SQLiteCommand(sql1, connection))
                 {
-                    SqlDataAdapter adapter = new SqlDataAdapter(command);
+                    //SqlDataAdapter adapter = new SqlDataAdapter(command);
+                    SQLiteDataAdapter adapter = new SQLiteDataAdapter(command);
                     adapter.Fill(dt);
                 }
                 dataGrid.DataSource = dt;
@@ -124,7 +124,7 @@ namespace StudentForm
             }
             else
             {
-                using (SqlConnection connection = new SqlConnection(connectionString))
+                using (SQLiteConnection connection = new SQLiteConnection(connectionString))
                 {
                     connection.Open();
                     List<string> selectedHobbies = new List<string>();
@@ -141,7 +141,7 @@ namespace StudentForm
            
                     string sql = "insert into StudentDetails(Name,Email,Phone,Zip,Hobbies) VALUES(@nameBox,@emailBox,@phonBox,@zipBox,@Hobbies)";
 
-                    using (SqlCommand cmd = new SqlCommand(sql, connection))
+                    using (SQLiteCommand cmd = new SQLiteCommand(sql, connection))
                     {
                         cmd.Parameters.AddWithValue("@nameBox", nameBox.Text);
                         cmd.Parameters.AddWithValue("@emailBox", emailBox.Text);
@@ -168,14 +168,14 @@ namespace StudentForm
 
                 }
                 DataTable dt = new DataTable();
-                using (SqlConnection connection = new SqlConnection(connectionString))
+                using (SQLiteConnection connection = new SQLiteConnection(connectionString))
                 {
 
                     connection.Open();
                     string sql1 = "select * from StudentDetails";
-                    using (SqlCommand command = new SqlCommand(sql1, connection))
+                    using (SQLiteCommand command = new SQLiteCommand(sql1, connection))
                     {
-                        SqlDataAdapter adapter = new SqlDataAdapter(command);
+                        SQLiteDataAdapter adapter = new SQLiteDataAdapter(command);
                         adapter.Fill(dt);
                     }
                     dataGrid.DataSource = dt;
@@ -209,11 +209,11 @@ namespace StudentForm
         private void DeleteDataFromDataSource(int id)
         {
             //string connectionString = "Server=(localdb)\\mssqllocaldb;Database=studentdb;Integrated Security=True";
-            using (SqlConnection connection = new SqlConnection(connectionString))
+            using (SQLiteConnection connection = new SQLiteConnection(connectionString))
             {
                 string deleteQuery = "DELETE FROM StudentDetails WHERE Id = @Id";
 
-                using (SqlCommand command = new SqlCommand(deleteQuery, connection))
+                using (SQLiteCommand command = new SQLiteCommand(deleteQuery, connection))
                 {
                     command.Parameters.AddWithValue("@Id", id);
 
@@ -318,14 +318,14 @@ namespace StudentForm
                     if (editForm.ShowDialog() == DialogResult.OK)
                     {
                         DataTable dt = new DataTable();
-                        using (SqlConnection connection = new SqlConnection(connectionString))
+                        using (SQLiteConnection connection = new SQLiteConnection(connectionString))
                         {
 
                             connection.Open();
                             string sql1 = "select * from StudentDetails";
-                            using (SqlCommand command = new SqlCommand(sql1, connection))
+                            using (SQLiteCommand command = new SQLiteCommand(sql1, connection))
                             {
-                                SqlDataAdapter adapter = new SqlDataAdapter(command);
+                                SQLiteDataAdapter adapter = new SQLiteDataAdapter(command);
                                 adapter.Fill(dt);
                             }
                             dataGrid.DataSource = dt;

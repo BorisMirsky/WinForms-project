@@ -82,7 +82,7 @@ namespace StudentForm
         {
             using (SQLiteConnection connection = new SQLiteConnection(this.connectionString))
             {
-                string updateQuery = "UPDATE StudentDetails SET Name = @updatedName,Email=@updatedEmail, Phone = @updatedPhone,Zip=@updatedZip, Hobbies = @updatedHobbies where Id=@selectedId"; // Replace YourTable with your actual table name
+                string updateQuery = "UPDATE Students SET Name = @updatedName,Email=@updatedEmail, Phone = @updatedPhone,Zip=@updatedZip, Hobbies = @updatedHobbies where Id=@selectedId"; 
 
                 using (SQLiteCommand command = new SQLiteCommand(updateQuery, connection))
                 {

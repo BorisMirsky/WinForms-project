@@ -59,7 +59,7 @@ namespace StudentForm
             {
 
                 connection.Open();
-                string sql1 = "select * from StudentDetails";
+                string sql1 = "select * from Students";
                 using (SQLiteCommand command = new SQLiteCommand(sql1, connection))
                 {
                     //SqlDataAdapter adapter = new SqlDataAdapter(command);
@@ -139,7 +139,7 @@ namespace StudentForm
 
                     string hobbies = string.Join(", ", selectedHobbies);
            
-                    string sql = "insert into StudentDetails(Name,Email,Phone,Zip,Hobbies) VALUES(@nameBox,@emailBox,@phonBox,@zipBox,@Hobbies)";
+                    string sql = "insert into Students(Name,Email,Phone,Zip,Hobbies) VALUES(@nameBox,@emailBox,@phonBox,@zipBox,@Hobbies)";
 
                     using (SQLiteCommand cmd = new SQLiteCommand(sql, connection))
                     {
@@ -172,7 +172,7 @@ namespace StudentForm
                 {
 
                     connection.Open();
-                    string sql1 = "select * from StudentDetails";
+                    string sql1 = "select * from Students";
                     using (SQLiteCommand command = new SQLiteCommand(sql1, connection))
                     {
                         SQLiteDataAdapter adapter = new SQLiteDataAdapter(command);

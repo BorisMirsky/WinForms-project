@@ -1,11 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
-using System.Data.SqlClient;
-//using System.Data.SqlClient;
 using System.Data.SQLite;
 using System.Diagnostics;
-using System.IO;
 using System.Net.Mail;
 using System.Text.RegularExpressions;
 using System.Windows.Forms;
@@ -16,19 +13,15 @@ namespace StudentForm
 {
     public partial class Form1 : Form
     {
-        //string conectionString = "Server=(localdb)\\mssqllocaldb;Database=studentdb;Integrated Security=True";
-        string connectionString = @"Data Source=C:\Users\Alexander\source\WinForms-project\WinForms1\StudentForm\DB\students_db.db;Integrated Security=True;journal mode=Off;";
-        private object hobbiesBox;
+        string connectionString = @"Data Source=C:\Users\Alexander\source\WinForms-project\WinForms1\StudentForm\Database\students_db.db;Integrated Security=True;journal mode=Off;";
         string txt1 = "";
         string txt2 = "";
         string txt3 = "";
         string txt4 = "";
-        private List<string> selectedData = new List<string>();
 
         public Form1()
         {
-            InitializeComponent();
-          
+            InitializeComponent();     
         }
         
         private void NAME_Click(object sender, EventArgs e)
@@ -59,23 +52,15 @@ namespace StudentForm
             DataTable dt = new DataTable();
             using (SQLiteConnection connection = new SQLiteConnection(connectionString, true))
             {
-                string[] allfiles = Directory.GetFiles("C:\\Users\\Alexander\\source\\WinForms-project\\WinForms1\\StudentForm\\DB\\");
-                foreach (string filename in allfiles)
-                {
-                    Debug.WriteLine(filename);
-                }
-                //
                 connection.Open();
-                string sql1 = "select * from Students";
+                string sql1 = "select * from students";
                 using (SQLiteCommand command = new SQLiteCommand(sql1, connection))
                 {
-                    //SqlDataAdapter adapter = new SqlDataAdapter(command);
                     SQLiteDataAdapter adapter = new SQLiteDataAdapter(command);
                     adapter.Fill(dt);
                 }
                 dataGrid.DataSource = dt;
             }
-            // db.fillDataGridView("select * from student", dataGrid);
         }
 
         private void moviecheckBox_CheckedChanged(object sender, EventArgs e)
@@ -90,17 +75,15 @@ namespace StudentForm
         }
 
         public void dataGrid_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-           
+        {   
         }
-
 
         private void Addbtn_Click(object sender, EventArgs e)
 
         {
             string mobileNumber = phonBox.Text;
             string emails = emailBox.Text.Trim();
-            string zipcodePattern = @"^\d{5}(?:-\d{4})?$"; // Zipcode pattern: 12345 or 12345-6789
+            string zipcodePattern = @"^\d{5}(?:-\d{4})?$"; 
             
             if (string.IsNullOrWhiteSpace(nameBox.Text))
             {
@@ -109,11 +92,9 @@ namespace StudentForm
             else if (string.IsNullOrWhiteSpace(emailBox.Text)) { MessageBox.Show("enter the email"); }
             else if (string.IsNullOrWhiteSpace(phonBox.Text)) { MessageBox.Show("enter the phon number"); }
             else if (string.IsNullOrWhiteSpace(zipBox.Text)) { MessageBox.Show("enter the zip number"); }
-            // else if (string.IsNullOrWhiteSpace((string)hobbiesBox)) { MessageBox.Show("enter the zip number"); }
            
             else if (!IsEmailValid(emails))
             {
-                // Email is valid, perform further actions
                 MessageBox.Show("Email is not valid!");
             }
             else if(!IsValidMobileNumber(mobileNumber))
@@ -144,25 +125,20 @@ namespace StudentForm
                     if (musiccheckBox.Checked)
                         selectedHobbies.Add("music");
 
-                    string hobbies = string.Join(", ", selectedHobbies);
-           
-                    string sql = "insert into Students(Name,Email,Phone,Zip,Hobbies) VALUES(@nameBox,@emailBox,@phonBox,@zipBox,@Hobbies)";
+                    string hobbies = string.Join(", ", selectedHobbies);        
+                    string sql = "insert into students(Name,Email,Phone,Zip,Hobbies) VALUES(@nameBox,@emailBox,@phonBox,@zipBox,@Hobbies)";
 
                     using (SQLiteCommand cmd = new SQLiteCommand(sql, connection))
                     {
                         cmd.Parameters.AddWithValue("@nameBox", nameBox.Text);
                         cmd.Parameters.AddWithValue("@emailBox", emailBox.Text);
                         cmd.Parameters.AddWithValue("@phonBox", phonBox.Text);
-
                         cmd.Parameters.AddWithValue("@zipBox", zipBox.Text);
-
                         cmd.Parameters.AddWithValue("@Hobbies", hobbies);
-
                         cmd.ExecuteNonQuery();
                     }
                     MessageBox.Show("data inserted successfully");
                         connection.Close();
-                    //Clear the checkboxes and name field after insertion
                     nameBox.Clear();
                     emailBox.Clear();
                     phonBox.Clear();
@@ -215,11 +191,9 @@ namespace StudentForm
         }
         private void DeleteDataFromDataSource(int id)
         {
-            //string connectionString = "Server=(localdb)\\mssqllocaldb;Database=studentdb;Integrated Security=True";
             using (SQLiteConnection connection = new SQLiteConnection(connectionString))
             {
-                string deleteQuery = "DELETE FROM StudentDetails WHERE Id = @Id";
-
+                string deleteQuery = "DELETE FROM students WHERE Id = @Id";
                 using (SQLiteCommand command = new SQLiteCommand(deleteQuery, connection))
                 {
                     command.Parameters.AddWithValue("@Id", id);
@@ -269,20 +243,21 @@ namespace StudentForm
         }
 
         private void phonBox_TextChanged(object sender, EventArgs e)
-        {
-          
+        {       
         }
+
         private bool IsValidMobileNumber(string input)
         {
-            string pattern = @"^\d{10}$"; // 10-digit numeric mobile number
+            string pattern = @"^\d{10}$"; 
             return Regex.IsMatch(input, pattern);
         }
-        private bool IsValidEmail(string email)
-        {
-            // Use a regular expression to validate email format
-            string pattern = @"^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$";
-            return Regex.IsMatch(email, pattern);
-        }
+
+        //private bool IsValidEmail(string email)
+        //{
+        //    string pattern = @"^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$";
+        //    return Regex.IsMatch(email, pattern);
+        //}
+
         private bool IsEmailValid(string email)
         {
             try
@@ -295,19 +270,18 @@ namespace StudentForm
                 return false;
             }
         }
+
         private bool AtLeastOneCheckboxSelected()
         {
-            // Check if at least one checkbox is selected
             if (moviecheckBox.Checked || footballcheckBox.Checked || swimmingcheckBox.Checked ||musiccheckBox.Checked)
             {
                 return true;
             }
             return false;
         }
-        private void label6_Click(object sender, EventArgs e)
-        {
 
-        }
+        private void label6_Click(object sender, EventArgs e)
+        {}
 
         private void editbtn_Click(object sender, EventArgs e)
         {
@@ -329,36 +303,29 @@ namespace StudentForm
                         {
 
                             connection.Open();
-                            string sql1 = "select * from StudentDetails";
+                            string sql1 = "select * from students";
                             using (SQLiteCommand command = new SQLiteCommand(sql1, connection))
                             {
                                 SQLiteDataAdapter adapter = new SQLiteDataAdapter(command);
                                 adapter.Fill(dt);
                             }
                             dataGrid.DataSource = dt;
-                        }
-                       
+                        }                 
                     }
                 }
             }
-
-
-
             else
             {
-
-                        MessageBox.Show("Please select a row to edit.", "Selection Required", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Please select a row to edit.", "Selection Required", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
 
         }
 
-        private DataTable GetDataFromDataSource()
-        {
-            // Replace with your actual data retrieval logic
-            DataTable dataTable = new DataTable();
-            // Fill the dataTable from your data source using appropriate SQL or other methods
-            return dataTable;
-        }
+        //private DataTable GetDataFromDataSource()
+        //{
+        //    DataTable dataTable = new DataTable();
+        //    return dataTable;
+        //}
 
     }
 }

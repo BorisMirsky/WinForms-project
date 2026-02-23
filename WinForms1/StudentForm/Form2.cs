@@ -1,64 +1,38 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-//using System.Data.SqlClient;
 using System.Data.SQLite;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Text.RegularExpressions;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Xml.Linq;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.Button;
 
 
 
-
-// for edit only box
 namespace StudentForm
 {
     public partial class Form2 : Form
     {
         private int selectedId;
-        //string connectionString = "Server=(localdb)\\mssqllocaldb;Database=studentdb;Integrated Security=True";
-        string connectionString = "./DB/students_db.db";
+        string connectionString = @"Data Source=C:\Users\Alexander\source\WinForms-project\WinForms1\StudentForm\Database\students_db.db;Integrated Security=True;journal mode=Off;";
         private DataRow dataRow;
-        //private SqlConnection connection;
-        private SQLiteConnection connection;
-        private DataRow row;
 
-        // private int selectedId;
         public Form2(DataRow row, int selectedId)
         {
             InitializeComponent();
-            //connection = sqlConnection;
             dataRow = row;
             this.selectedId = selectedId;
-
-            // Populate input controls with data from the DataRow
             nameBox1.Text = dataRow["Name"].ToString();
             emailBox1.Text = dataRow["Email"].ToString();
             phonBox1.Text = dataRow["Phone"].ToString();
             zipBox1.Text = dataRow["Zip"].ToString();
             hobbiesBox1.Text = dataRow["Hobbies"].ToString();
-
-
         }
-
-
 
         public SQLiteConnection sqlConnection { get; private set; }
 
         private void Form2_Load(object sender, EventArgs e)
         {
-
         }
 
         private void phonBox_TextChanged(object sender, EventArgs e)
         {
-
         }
 
         private void updatebtn_Click(object sender, EventArgs e)
@@ -66,16 +40,11 @@ namespace StudentForm
             string updatedName = nameBox1.Text;
             string updatedEmail = emailBox1.Text;
             string updatedPhone = phonBox1.Text;
-
             string updatedZip = zipBox1.Text;
-            string updatedHobbies = hobbiesBox1.Text;
-            
+            string updatedHobbies = hobbiesBox1.Text;     
             UpdateDataInDataSource(selectedId, updatedName, updatedEmail, updatedPhone, updatedZip, updatedHobbies);
-
             DialogResult = DialogResult.OK;
-            Close();
-            
-
+            Close();          
         }
 
         private void UpdateDataInDataSource(int selectedId, string updatedName, string updatedEmail, string updatedPhone, string updatedZip, string updatedHobbies)
@@ -116,9 +85,7 @@ namespace StudentForm
 
         private void label6_Click(object sender, EventArgs e)
         {
-
         }
     }
-
 
 }        

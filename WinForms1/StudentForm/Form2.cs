@@ -23,7 +23,7 @@ namespace StudentForm
     {
         private int selectedId;
         //string connectionString = "Server=(localdb)\\mssqllocaldb;Database=studentdb;Integrated Security=True";
-        string connectionString = "./Database2/students_db.db";
+        string connectionString = "./DB/students_db.db";
         private DataRow dataRow;
         //private SqlConnection connection;
         private SQLiteConnection connection;

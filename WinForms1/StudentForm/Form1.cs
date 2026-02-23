@@ -1,12 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Data.SqlClient;
 //using System.Data.SqlClient;
 using System.Data.SQLite;
+using System.Diagnostics;
+using System.IO;
+using System.Net.Mail;
 using System.Text.RegularExpressions;
 using System.Windows.Forms;
-using System.Net.Mail;
-using System.Data.SqlClient;
 
 
 
@@ -15,7 +17,7 @@ namespace StudentForm
     public partial class Form1 : Form
     {
         //string conectionString = "Server=(localdb)\\mssqllocaldb;Database=studentdb;Integrated Security=True";
-        string connectionString = "Database=./Database2/students_db.db;Integrated Security=True;";
+        string connectionString = @"Data Source=C:\Users\Alexander\source\WinForms-project\WinForms1\StudentForm\DB\students_db.db;Integrated Security=True;journal mode=Off;";
         private object hobbiesBox;
         string txt1 = "";
         string txt2 = "";
@@ -55,9 +57,14 @@ namespace StudentForm
         private void Form1_Load(object sender, EventArgs e)
         {
             DataTable dt = new DataTable();
-            using (SQLiteConnection connection = new SQLiteConnection(connectionString))
+            using (SQLiteConnection connection = new SQLiteConnection(connectionString, true))
             {
-
+                string[] allfiles = Directory.GetFiles("C:\\Users\\Alexander\\source\\WinForms-project\\WinForms1\\StudentForm\\DB\\");
+                foreach (string filename in allfiles)
+                {
+                    Debug.WriteLine(filename);
+                }
+                //
                 connection.Open();
                 string sql1 = "select * from Students";
                 using (SQLiteCommand command = new SQLiteCommand(sql1, connection))

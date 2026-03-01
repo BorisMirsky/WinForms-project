@@ -1,13 +1,16 @@
-﻿using System.ComponentModel;
+﻿using WinForms2;
+using System.ComponentModel;
 
-namespace GetStartedWinForms;
-
-public class Product
+namespace WinForms2
 {
-    public int ProductId { get; set; }
+    public class Product
+    {
+        public int ProductId { get; set; }
 
-    public string? Name { get; set; }
+        public string? Name { get; set; }
 
-    public int CategoryId { get; set; }
-    public virtual Category Category { get; set; } = null!;
+        public int CategoryId { get; set; }
+        public virtual Category Category { get; set; } = null!;
+    }
 }
+

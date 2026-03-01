@@ -1,12 +1,15 @@
 ﻿using Microsoft.EntityFrameworkCore.ChangeTracking;
+using WinForms2;
 
-namespace GetStartedWinForms;
 
-public class Category
+namespace WinForms2
 {
-    public int CategoryId { get; set; }
+    public class Category
+    {
+        public int CategoryId { get; set; }
 
-    public string? Name { get; set; }
+        public string? Name { get; set; }
 
-    public virtual ObservableCollectionListSource<Product> Products { get; } = new();
+        public virtual ObservableCollectionListSource<Product> Products { get; } = new();
+    }
 }

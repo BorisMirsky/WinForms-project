@@ -71,7 +71,7 @@
             // 
             // categoryBindingSource
             // 
-            categoryBindingSource.DataSource = typeof(GetStartedWinForms.Category);
+            categoryBindingSource.DataSource = typeof(WinForms2.Category);
             // 
             // dataGridViewProducts
             // 

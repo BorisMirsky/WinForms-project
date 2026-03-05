@@ -12,11 +12,13 @@ namespace WinForms2
         {
             builder.HasKey(d => d.ProductId);
 
-            builder.HasOne(d => d.Category)
-                .WithMany(r => r.Products)
-                .HasForeignKey(d => d.CategoryId)
+            builder.HasOne(p => p.Category)
+                .WithMany(p => p.Products)
+                .HasForeignKey(p => p.CategoryId)
                 .IsRequired();
+            builder.Property(p => p.Name);
         }
+
         //void IEntityTypeConfiguration<Product>.Configure(EntityTypeBuilder<Product> builder)
         //{
         //    throw new NotImplementedException();

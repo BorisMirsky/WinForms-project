@@ -13,8 +13,9 @@ namespace WinForms2
             builder.HasKey(d => d.CategoryId);
 
             builder
-                .HasMany(d => d.Products)
-                .WithOne(t => t.Category);
+                .HasMany(p => p.Products)
+                .WithOne(c => c.Category);
+            builder.Property(c => c.Name);
         }
         //void IEntityTypeConfiguration<Category>.Configure(EntityTypeBuilder<Category> builder)
         //{

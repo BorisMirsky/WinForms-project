@@ -10,7 +10,8 @@ namespace WinForms2
         public string? Name { get; set; }
 
         public int CategoryId { get; set; }
-        public virtual Category Category { get; set; } = null!;
+
+        public Category Category { get; set; } = null!;     //virtual 
     }
 }
 

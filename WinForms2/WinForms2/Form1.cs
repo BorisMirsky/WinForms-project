@@ -20,10 +20,8 @@ namespace WinForms2
             base.OnLoad(e);
 
             this.dbContext = new ProductsContext();
-
-            // Uncomment the line below to start fresh with a new database.
             // this.dbContext.Database.EnsureDeleted();
-            this.dbContext.Database.EnsureCreated();
+            //this.dbContext.Database.EnsureCreated();
 
             this.dbContext.Categories.Load();
 
@@ -33,7 +31,6 @@ namespace WinForms2
         protected override void OnClosing(CancelEventArgs e)
         {
             base.OnClosing(e);
-
             this.dbContext?.Dispose();
             this.dbContext = null;
         }

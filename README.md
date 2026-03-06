@@ -11,8 +11,8 @@ WinForms1
 
 
 WinForms2
-1. Не последняя версия Microsoft.EntityFrameworkCore.Sqlite
+1. Пониденная версия Microsoft.EntityFrameworkCore.Sqlite
 2. Code First
-3.   ToDo:
-3.1  Доделать базовую функциональность
-3.2  Прикрутить БД
+3. Read, Update, Delete - ok
+4.   ToDo:  Create
+

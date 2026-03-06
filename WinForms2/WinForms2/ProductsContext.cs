@@ -1,10 +1,11 @@
 ﻿
 using Microsoft.EntityFrameworkCore;
-using System.Configuration;
 using Microsoft.EntityFrameworkCore.Diagnostics;
 using Microsoft.Extensions.Logging;
-using static Microsoft.EntityFrameworkCore.DbLoggerCategory.Database;
+using System.Configuration;
 using System.Diagnostics;
+using static Microsoft.EntityFrameworkCore.DbLoggerCategory.Database;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 
 
@@ -18,11 +19,15 @@ namespace WinForms2
         //}
 
         public DbSet<Product> Products { get; set; } = null!;
+        
         public DbSet<Category> Categories { get; set; } = null!;
+        string connectionString = @"Data Source = C:\Users\Alexander\source\WinForms-project\WinForms2\WinForms2\Database\ProductsAndCategories.db";
 
-        string connectionString = @"Data Source=C:\Users\Alexander\source\WinForms-project\WinForms2\Database\ProductsAndCategories.db;";
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-            => optionsBuilder.UseSqlite(connectionString); 
+            => optionsBuilder.UseSqlite(connectionString);
+
+        //string connection = builder.Configuration.GetConnectionString("DefaultConnection");
+        //builder.Services.AddDbContext<ForumContext>(options => options.UseSqlServer(connection));
 
         //protected override void OnModelCreating(ModelBuilder modelBuilder)
         //{

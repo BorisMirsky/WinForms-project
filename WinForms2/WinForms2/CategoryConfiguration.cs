@@ -17,9 +17,9 @@ namespace WinForms2
                 .WithOne(c => c.Category);
             builder.Property(c => c.Name);
         }
-        //void IEntityTypeConfiguration<Category>.Configure(EntityTypeBuilder<Category> builder)
-        //{
-        //    throw new NotImplementedException();
-        //}
+        void IEntityTypeConfiguration<Category>.Configure(EntityTypeBuilder<Category> builder)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

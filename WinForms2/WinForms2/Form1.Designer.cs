@@ -95,7 +95,7 @@
             buttonSave.Name = "buttonSave";
             buttonSave.Size = new Size(116, 35);
             buttonSave.TabIndex = 2;
-            buttonSave.Text = "button1";
+            buttonSave.Text = "Save";
             buttonSave.UseVisualStyleBackColor = true;
             buttonSave.Click += buttonSave_Click;
             // 

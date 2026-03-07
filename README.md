@@ -5,14 +5,24 @@ CRUD operations on WinForms
 WinForms1
 1. CRUD работают.
 2. Без ORM, запросы к БД напрямую (ADO.Net)
-3. Пришлось поставить пониженную версию System.Data.SQLite
+3. Пониженная версия System.Data.SQLite
 4. Не работает относительный путь, пришлось прописать абсолютный. 
 
 
 
 WinForms2
-1. Пониденная версия Microsoft.EntityFrameworkCore.Sqlite
+1. Пониженная версия Microsoft.EntityFrameworkCore.Sqlite
 2. Code First
-3. Read, Update, Delete - ok
-4.   ToDo:  Create
+3. CRUD: Read, Update, Delete - ok
+4.   ToDo:  
+4.1  Create operation
+Current Error:  SQLite Error 19: 'NOT NULL constraint failed:
+4.2  relative path?
+4.2. Ещё раз посмотреть на Fluent API  Configuration
+4.3  До нажатия кнопки остальные категории не отображаются
+
+
+
+
+
 

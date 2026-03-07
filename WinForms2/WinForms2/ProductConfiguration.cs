@@ -19,9 +19,9 @@ namespace WinForms2
             builder.Property(p => p.Name);
         }
 
-        //void IEntityTypeConfiguration<Product>.Configure(EntityTypeBuilder<Product> builder)
-        //{
-        //    throw new NotImplementedException();
-        //}
+        void IEntityTypeConfiguration<Product>.Configure(EntityTypeBuilder<Product> builder)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

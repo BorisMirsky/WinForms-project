@@ -1,5 +1,6 @@
 
 using System.ComponentModel;
+using System.Diagnostics;
 using Microsoft.EntityFrameworkCore;
 
 
@@ -26,6 +27,7 @@ namespace WinForms2
             categoryBindingSource.DataSource = dbContext.Categories.Local.ToBindingList();
         }
 
+
         protected override void OnClosing(CancelEventArgs e)
         {
             base.OnClosing(e);
@@ -34,12 +36,6 @@ namespace WinForms2
         }
 
 
-        private void buttonSave_Click(object sender, EventArgs e)
-        {
-            dbContext!.SaveChanges();
-            dataGridViewCategories.Refresh();
-            dataGridViewProducts.Refresh();
-        }
 
         private void dataGridViewCategories_SelectionChanged_1(object sender, EventArgs e)
         {
@@ -51,6 +47,24 @@ namespace WinForms2
                 {
                     dbContext.Entry(category).Collection(e => e.Products).Load();
                 }
+            }
+        }
+
+        private void buttonSave_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                dbContext!.SaveChanges();
+                dataGridViewCategories.Refresh();
+                dataGridViewProducts.Refresh();
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine(" ");
+                Debug.WriteLine(" ");
+                Debug.WriteLine(ex.InnerException.Message);
+                Debug.WriteLine(" ");
+                Debug.WriteLine(" ");
             }
         }
     }

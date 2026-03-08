@@ -34,10 +34,10 @@
             nameDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
             categoryBindingSource = new BindingSource(components);
             dataGridViewProducts = new DataGridView();
-            productsBindingSource = new BindingSource(components);
-            buttonSave = new Button();
             productIdDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
             nameDataGridViewTextBoxColumn1 = new DataGridViewTextBoxColumn();
+            productsBindingSource = new BindingSource(components);
+            buttonSave = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridViewCategories).BeginInit();
             ((System.ComponentModel.ISupportInitialize)categoryBindingSource).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dataGridViewProducts).BeginInit();
@@ -55,6 +55,7 @@
             dataGridViewCategories.Size = new Size(345, 331);
             dataGridViewCategories.TabIndex = 0;
             dataGridViewCategories.SelectionChanged += dataGridViewCategories_SelectionChanged_1;
+            dataGridViewCategories.ClientSizeChanged += dataGridViewCategories_ClientSizeChanged;
             // 
             // categoryIdDataGridViewTextBoxColumn
             // 
@@ -71,7 +72,7 @@
             // 
             // categoryBindingSource
             // 
-            categoryBindingSource.DataSource = typeof(WinForms2.Category);
+            categoryBindingSource.DataSource = typeof(Category);
             // 
             // dataGridViewProducts
             // 
@@ -83,6 +84,20 @@
             dataGridViewProducts.Name = "dataGridViewProducts";
             dataGridViewProducts.Size = new Size(396, 331);
             dataGridViewProducts.TabIndex = 1;
+            dataGridViewProducts.CellValueChanged += dataGridViewProducts_CellValueChanged;
+            // 
+            // productIdDataGridViewTextBoxColumn
+            // 
+            productIdDataGridViewTextBoxColumn.DataPropertyName = "ProductId";
+            productIdDataGridViewTextBoxColumn.HeaderText = "ProductId";
+            productIdDataGridViewTextBoxColumn.Name = "productIdDataGridViewTextBoxColumn";
+            productIdDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // nameDataGridViewTextBoxColumn1
+            // 
+            nameDataGridViewTextBoxColumn1.DataPropertyName = "Name";
+            nameDataGridViewTextBoxColumn1.HeaderText = "Name";
+            nameDataGridViewTextBoxColumn1.Name = "nameDataGridViewTextBoxColumn1";
             // 
             // productsBindingSource
             // 
@@ -98,19 +113,6 @@
             buttonSave.Text = "Save";
             buttonSave.UseVisualStyleBackColor = true;
             buttonSave.Click += buttonSave_Click;
-            // 
-            // productIdDataGridViewTextBoxColumn
-            // 
-            productIdDataGridViewTextBoxColumn.DataPropertyName = "ProductId";
-            productIdDataGridViewTextBoxColumn.HeaderText = "ProductId";
-            productIdDataGridViewTextBoxColumn.Name = "productIdDataGridViewTextBoxColumn";
-            productIdDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // nameDataGridViewTextBoxColumn1
-            // 
-            nameDataGridViewTextBoxColumn1.DataPropertyName = "Name";
-            nameDataGridViewTextBoxColumn1.HeaderText = "Name";
-            nameDataGridViewTextBoxColumn1.Name = "nameDataGridViewTextBoxColumn1";
             // 
             // MainForm
             // 

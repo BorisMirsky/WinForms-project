@@ -1,7 +1,8 @@
 
+using Microsoft.EntityFrameworkCore;
 using System.ComponentModel;
 using System.Diagnostics;
-using Microsoft.EntityFrameworkCore;
+using System.Windows.Forms;
 
 
 
@@ -19,11 +20,8 @@ namespace WinForms2
         protected override void OnLoad(EventArgs e)
         {
             base.OnLoad(e);
-
             dbContext = new ProductsContext();
-
             dbContext.Categories.Load();
-
             categoryBindingSource.DataSource = dbContext.Categories.Local.ToBindingList();
         }
 
@@ -34,7 +32,6 @@ namespace WinForms2
             dbContext?.Dispose();
             dbContext = null;
         }
-
 
 
         private void dataGridViewCategories_SelectionChanged_1(object sender, EventArgs e)
@@ -49,6 +46,7 @@ namespace WinForms2
                 }
             }
         }
+
 
         private void buttonSave_Click(object sender, EventArgs e)
         {
@@ -67,5 +65,35 @@ namespace WinForms2
                 Debug.WriteLine(" ");
             }
         }
+
+        private void dataGridViewCategories_ClientSizeChanged(object sender, EventArgs e)
+        {
+            if (dbContext != null)
+            {
+                var category = (Category?)dataGridViewCategories.CurrentRow!.DataBoundItem;
+
+                if (category != null)
+                {
+                    dbContext.Entry(category).Collection(e => e.Products).Load();
+                }
+            }
+
+        }
+
+        private void dataGridViewProducts_CellValueChanged(object sender, DataGridViewCellEventArgs e)
+        {
+            //var product = (Product?)dataGridViewProducts.CurrentRow!.DataBoundItem;
+
+            //if (product != null)
+            //{
+                //dbContext.Entry(category).Collection(e => e.Products).Load();
+                Debug.WriteLine(" ");
+                Debug.WriteLine(" ");
+                Debug.WriteLine(sender.ToString());
+                Debug.WriteLine(" ");
+                Debug.WriteLine(" ");
+            //}
+        }
+
     }
 }

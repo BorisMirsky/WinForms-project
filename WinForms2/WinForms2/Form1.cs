@@ -66,19 +66,19 @@ namespace WinForms2
             }
         }
 
-        private void dataGridViewCategories_ClientSizeChanged(object sender, EventArgs e)
-        {
-            if (dbContext != null)
-            {
-                var category = (Category?)dataGridViewCategories.CurrentRow!.DataBoundItem;
+        //private void dataGridViewCategories_ClientSizeChanged(object sender, EventArgs e)
+        //{
+        //    if (dbContext != null)
+        //    {
+        //        var category = (Category?)dataGridViewCategories.CurrentRow!.DataBoundItem;
 
-                if (category != null)
-                {
-                    dbContext.Entry(category).Collection(e => e.Products).Load();
-                }
-            }
+        //        if (category != null)
+        //        {
+        //            dbContext.Entry(category).Collection(e => e.Products).Load();
+        //        }
+        //    }
 
-        }
+        //}
 
         private void dataGridViewProducts_CellValueChanged(object sender, DataGridViewCellEventArgs e)
         {
@@ -89,6 +89,7 @@ namespace WinForms2
                 //dbContext.Entry(category).Collection(e => e.Products).Load();
                 Debug.WriteLine(" ");
                 Debug.WriteLine(" ");
+                Debug.WriteLine("CellValueChanged");
                 Debug.WriteLine(sender.ToString());
                 Debug.WriteLine(" ");
                 Debug.WriteLine(" ");

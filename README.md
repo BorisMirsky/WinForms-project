@@ -2,7 +2,7 @@
 CRUD operations on WinForms
 
 
-WinForms1 (Students)
+WinForms1 
 1. CRUD работают.
 2. Без ORM, запросы к БД напрямую (ADO.Net)
 3. Пониженная версия System.Data.SQLite
@@ -23,7 +23,7 @@ Current Error:  SQLite Error 19: 'NOT NULL constraint failed: '
 4.3  До нажатия кнопки остальные категории не отображаются
 
 
-?
+relative path?
 string baseDir = AppDomain.CurrentDomain.BaseDirectory;
 logFilePath = Path.Combine(baseDir, "C:\\TempServices\\CurrencyLog.txt");
 

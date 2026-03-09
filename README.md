@@ -16,16 +16,12 @@ WinForms2
 3. CRUD: Read, Update, Delete - ok
 
 4.   ToDo:  
-4.1  Create operation
-Current Error:  SQLite Error 19: 'NOT NULL constraint failed: '
-4.2  relative path?
-4.2. Fluent API Configuration - не нужен?!
-4.3  До нажатия кнопки остальные категории не отображаются
+-  отвалился относительный путь
+- Работает без Fluent API Configuration - но как? не понимаю
+- Категории отображаются только после 2го нажатия (прохода)
+- форматирование (оформление) README.MD
 
 
-relative path?
-string baseDir = AppDomain.CurrentDomain.BaseDirectory;
-logFilePath = Path.Combine(baseDir, "C:\\TempServices\\CurrencyLog.txt");
 
 
 

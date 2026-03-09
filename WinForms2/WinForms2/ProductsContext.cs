@@ -1,5 +1,8 @@
 ﻿
 using Microsoft.EntityFrameworkCore;
+using System.Diagnostics;
+using System.Configuration;
+
 
 
 namespace WinForms2
@@ -11,7 +14,8 @@ namespace WinForms2
         
         public DbSet<Category> Categories { get; set; } = null!;
 
-        string connectionString = @"Data Source = C:\Users\Alexander\source\WinForms-project\WinForms2\WinForms2\Database\ProductsAndCategories.db";
+        static string? connString = ConfigurationManager.AppSettings["ConnectionString"];
+        string connectionString = $"Data Source = {connString}";
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
             => optionsBuilder.UseSqlite(connectionString);

@@ -57,3 +57,4 @@ C:\Users\Alexander\source\WinForms-project\WinForms2\WinForms2\obj\Debug\net9.0-
 C:\Users\Alexander\source\WinForms-project\WinForms2\WinForms2\obj\Debug\net9.0-windows\WinForms2.pdb
 C:\Users\Alexander\source\WinForms-project\WinForms2\WinForms2\obj\Debug\net9.0-windows\WinForms2.genruntimeconfig.cache
 C:\Users\Alexander\source\WinForms-project\WinForms2\WinForms2\obj\Debug\net9.0-windows\ref\WinForms2.dll
+C:\Users\Alexander\source\WinForms-project\WinForms2\WinForms2\bin\Debug\net9.0-windows\WinForms2.dll.config

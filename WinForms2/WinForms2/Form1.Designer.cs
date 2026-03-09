@@ -47,6 +47,7 @@
             // dataGridViewCategories
             // 
             dataGridViewCategories.AutoGenerateColumns = false;
+            dataGridViewCategories.BackgroundColor = SystemColors.GradientActiveCaption;
             dataGridViewCategories.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewCategories.Columns.AddRange(new DataGridViewColumn[] { categoryIdDataGridViewTextBoxColumn, nameDataGridViewTextBoxColumn });
             dataGridViewCategories.DataSource = categoryBindingSource;
@@ -55,7 +56,6 @@
             dataGridViewCategories.Size = new Size(345, 331);
             dataGridViewCategories.TabIndex = 0;
             dataGridViewCategories.SelectionChanged += dataGridViewCategories_SelectionChanged_1;
-            //dataGridViewCategories.ClientSizeChanged += dataGridViewCategories_ClientSizeChanged;
             // 
             // categoryIdDataGridViewTextBoxColumn
             // 
@@ -74,18 +74,15 @@
             // 
             categoryBindingSource.DataSource = typeof(Category);
             // 
-            // dataGridViewProducts
             // 
             dataGridViewProducts.AutoGenerateColumns = false;
+            dataGridViewProducts.BackgroundColor = SystemColors.GradientInactiveCaption;
             dataGridViewProducts.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewProducts.Columns.AddRange(new DataGridViewColumn[] { productIdDataGridViewTextBoxColumn, nameDataGridViewTextBoxColumn1 });
             dataGridViewProducts.DataSource = productsBindingSource;
             dataGridViewProducts.Location = new Point(484, 37);
             dataGridViewProducts.Name = "dataGridViewProducts";
             dataGridViewProducts.Size = new Size(396, 331);
-            dataGridViewProducts.TabIndex = 1;
-            dataGridViewProducts.CellValueChanged += dataGridViewProducts_CellValueChanged;
-            // 
             // productIdDataGridViewTextBoxColumn
             // 
             productIdDataGridViewTextBoxColumn.DataPropertyName = "ProductId";

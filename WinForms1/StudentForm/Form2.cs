@@ -2,7 +2,7 @@
 using System.Data;
 using System.Data.SQLite;
 using System.Windows.Forms;
-
+using System.Configuration;
 
 
 namespace StudentForm
@@ -10,7 +10,8 @@ namespace StudentForm
     public partial class Form2 : Form
     {
         private int selectedId;
-        string connectionString = @"Data Source=C:\Users\Alexander\source\WinForms-project\WinForms1\StudentForm\Database\students_db.db;Integrated Security=True;journal mode=Off;";
+        static string connString = ConfigurationManager.AppSettings["ConnectionString"];
+        readonly string connectionString = $"Data Source = {connString}";
         private DataRow dataRow;
 
         public Form2(DataRow row, int selectedId)

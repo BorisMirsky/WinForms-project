@@ -2,18 +2,18 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SQLite;
-using System.Diagnostics;
 using System.Net.Mail;
 using System.Text.RegularExpressions;
 using System.Windows.Forms;
-
+using System.Configuration;
 
 
 namespace StudentForm
 {
     public partial class Form1 : Form
     {
-        string connectionString = @"Data Source=C:\Users\Alexander\source\WinForms-project\WinForms1\StudentForm\Database\students_db.db;Integrated Security=True;journal mode=Off;";
+        static string connString = ConfigurationManager.AppSettings["ConnectionString"];
+        readonly string connectionString = $"Data Source = {connString}";
         string txt1 = "";
         string txt2 = "";
         string txt3 = "";
@@ -252,11 +252,6 @@ namespace StudentForm
             return Regex.IsMatch(input, pattern);
         }
 
-        //private bool IsValidEmail(string email)
-        //{
-        //    string pattern = @"^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$";
-        //    return Regex.IsMatch(email, pattern);
-        //}
 
         private bool IsEmailValid(string email)
         {
@@ -320,12 +315,6 @@ namespace StudentForm
             }
 
         }
-
-        //private DataTable GetDataFromDataSource()
-        //{
-        //    DataTable dataTable = new DataTable();
-        //    return dataTable;
-        //}
 
     }
 }

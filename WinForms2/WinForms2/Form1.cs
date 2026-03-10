@@ -50,7 +50,6 @@ namespace WinForms2
 
         private void buttonSave_Click(object sender, EventArgs e)
         {
-
             dbContext!.SaveChanges();
             dataGridViewCategories.Refresh();
             dataGridViewProducts.Refresh();

@@ -1,0 +1,69 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\\u0411\u043E\u0440\u0438\u0441\\source\\WinForms-project\\WinForms1\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{D4BB11B4-5CAB-4C97-BA37-F491E1126B28}|StudentForm\\StudentForm.csproj|c:\\users\\\u0431\u043E\u0440\u0438\u0441\\source\\winforms-project\\winforms1\\studentform\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D4BB11B4-5CAB-4C97-BA37-F491E1126B28}|StudentForm\\StudentForm.csproj|solutionrelative:studentform\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D4BB11B4-5CAB-4C97-BA37-F491E1126B28}|StudentForm\\StudentForm.csproj|C:\\Users\\\u0411\u043E\u0440\u0438\u0441\\source\\WinForms-project\\WinForms1\\studentform\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{D4BB11B4-5CAB-4C97-BA37-F491E1126B28}|StudentForm\\StudentForm.csproj|solutionrelative:studentform\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "C:\\Users\\\u0411\u043E\u0440\u0438\u0441\\source\\WinForms-project\\WinForms1\\StudentForm\\Form1.cs",
+              "RelativeDocumentMoniker": "StudentForm\\Form1.cs",
+              "ToolTip": "C:\\Users\\\u0411\u043E\u0440\u0438\u0441\\source\\WinForms-project\\WinForms1\\StudentForm\\Form1.cs",
+              "RelativeToolTip": "StudentForm\\Form1.cs",
+              "ViewState": "AgIAADkAAAAAAAAAAAAAADwAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-17T14:55:03.652Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "App.config",
+              "DocumentMoniker": "C:\\Users\\\u0411\u043E\u0440\u0438\u0441\\source\\WinForms-project\\WinForms1\\StudentForm\\App.config",
+              "RelativeDocumentMoniker": "StudentForm\\App.config",
+              "ToolTip": "C:\\Users\\\u0411\u043E\u0440\u0438\u0441\\source\\WinForms-project\\WinForms1\\StudentForm\\App.config",
+              "RelativeToolTip": "StudentForm\\App.config",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAALAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2026-05-17T04:31:18.155Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
